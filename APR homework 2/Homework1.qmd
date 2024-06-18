@@ -46,8 +46,12 @@ plot(rape_data, type = "o", col = "magenta", xlab = "State", ylab = "Rape Arrest
 #setting labels for x-axis
 text(1:nrow(USArrests), par("usr")[3] - 0.5, labels = rownames(USArrests), srt = 60, adj = 1, cex = 0.6, xpd = TRUE)
 
+
+#display rape_data
+head(rape_data)
+
 ```
 
 #### Interpretation
 
-The above plot indicates that Nevada records the highest number of Rape arrests that is more than 44 and North Dakota records the lowest number of Rape Arrests. More than 50% of the states record Rape arrests less than 25.
+The above plot indicates that Nevada records the highest number of Rape arrests that is more than 44 and North Dakota records the lowest number of Rape Arrests. More than 50% of the states record Rape arrests less than 25. Also here the rape_data has been printed. In order for output to be short only first few data has been loaded i.e using head().
