@@ -40,14 +40,12 @@ data("USArrests")
 rape_data <- USArrests$Rape
 
 #plot the Rape data of different states
-plot(rape_data, type = "o", col = "blue", xlab = "State", ylab = "Rape Arrests (per 100,000)", 
+plot(rape_data, type = "o", col = "magenta", xlab = "State", ylab = "Rape Arrests (per 100,000)", 
      main = "Rape Arrests in US States", xaxt = "n")
 
 #setting labels for x-axis
-text(1:nrow(USArrests), par("usr")[3] - 0.5, labels = rownames(USArrests), srt = 90, adj = 1, cex = 0.6, xpd = TRUE)
+text(1:nrow(USArrests), par("usr")[3] - 0.5, labels = rownames(USArrests), srt = 60, adj = 1, cex = 0.6, xpd = TRUE)
 
-#setting labels for x-axis
-text(1:nrow(USArrests), par("usr")[3] - 0.5, labels = rownames(USArrests), srt = 90, adj = 1, cex = 0.6, xpd = TRUE)
 ```
 
 #### Interpretation
