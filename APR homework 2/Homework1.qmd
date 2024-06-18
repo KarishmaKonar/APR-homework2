@@ -46,8 +46,8 @@ plot(rape_data, type = "o", col = "blue", xlab = "State", ylab = "Rape Arrests (
 #setting labels for x-axis
 text(1:nrow(USArrests), par("usr")[3] - 0.5, labels = rownames(USArrests), srt = 90, adj = 1, cex = 0.6, xpd = TRUE)
 
-
-
+#setting labels for x-axis
+text(1:nrow(USArrests), par("usr")[3] - 0.5, labels = rownames(USArrests), srt = 90, adj = 1, cex = 0.6, xpd = TRUE)
 ```
 
 #### Interpretation
