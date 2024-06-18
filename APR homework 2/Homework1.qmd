@@ -1,0 +1,55 @@
+---
+author: Karishma Konar(23200515)
+title: Homework 1
+format: html
+---
+
+# The US Arrest data
+
+This data set contains statistics about various violent crimes rates like ***Murder, Assault, Urban population*** and ***Rape*** by US state.
+
+The following plot displays statistics of ***Rape*** by US state and is measured by *Rape arrest (per 100,000)*
+
+```{r}
+library(usethis)
+usethis::git_sitrep()
+```
+```{r}
+usethis::use_git_config(
+    user.name = "KarishmaKonar", # Your username
+    user.email = "karishma.konar@ucdconnect.ie") # Your email
+```
+
+```{r}
+usethis::create_github_token()
+```
+```{r}
+library(gitcreds)
+# Replace 'path_to_git_executable' with the actual path to the Git executable
+gitcreds::gitcreds_set()
+
+```
+
+
+```{r}
+#| echo: false
+#loading the USArrests dataset
+data("USArrests")
+
+#extracting the Rape column
+rape_data <- USArrests$Rape
+
+#plot the Rape data of different states
+plot(rape_data, type = "o", col = "blue", xlab = "State", ylab = "Rape Arrests (per 100,000)", 
+     main = "Rape Arrests in US States", xaxt = "n")
+
+#setting labels for x-axis
+text(1:nrow(USArrests), par("usr")[3] - 0.5, labels = rownames(USArrests), srt = 90, adj = 1, cex = 0.6, xpd = TRUE)
+
+
+
+```
+
+#### Interpretation
+
+The above plot indicates that Nevada records the highest number of Rape arrests that is more than 44 and North Dakota records the lowest number of Rape Arrests. More than 50% of the states record Rape arrests less than 25.
